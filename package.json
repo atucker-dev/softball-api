@@ -1,0 +1,24 @@
+{
+  "name": "softball-api",
+  "version": "1.0.0",
+  "description": "rec league softball team API",
+  "main": "index.js",
+"scripts": {
+  "start-dynamodb": "docker run --rm --name dynamodb-local -p 8000:8000 amazon/dynamodb-local",
+  "create-tables": "node src/db/createUserTable.js",
+  "start-api": "node src/app.js",
+  "dev": "npm run start-dynamodb & npm run create-tables && npm run start-api",
+  "stop-dynamodb": "docker stop dynamodb-local"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1540.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
