@@ -80,7 +80,7 @@ To stop the API server, you can simply interrupt the process:
 If you're using Docker to run DynamoDB Local, you can stop and remove the container with the following command:
 
 ```bash
-npm run stop-dynamodb
+npm run stopddb
 ```
 
 
